@@ -6,4 +6,4 @@ It has been styled using css and html.
 * inside event_managment, open cmd/terminal
 * run command "python manage.py runserver"
 
-ENJOY!
+
