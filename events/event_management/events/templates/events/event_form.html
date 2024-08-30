@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create or Edit Event</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f8e9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #8bc34a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .event-form {
+            padding: 20px;
+            background-color: white;
+            margin: 20px auto;
+            width: 60%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .event-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        .event-form button {
+            background-color: #8bc34a;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #8bc34a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ form.instance.pk|yesno:"Edit Event,Create Event" }}</h1>
+        <nav>
+            <a href="{% url 'event_list' %}" class="btn">Back to List</a>
+        </nav>
+    </header>
+    <main>
+        <section class="event-form">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Save</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; {{ current_year }} Event Management. All rights reserved.</p>
+    </footer>
+</body>
+</html>
