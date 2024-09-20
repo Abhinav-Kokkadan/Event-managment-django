@@ -1,0 +1,83 @@
+/* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a.btn {
+    background: #007bff;
+}
+
+nav a.btn-danger {
+    background: #dc3545;
+}
+
+nav a.btn:hover {
+    opacity: 0.8;
+}
+
+main {
+    padding: 20px;
+}
+
+.event-list, .event-detail, .event-form, .event-delete {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event-item {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.event-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.event-card h3 {
+    margin: 0 0 10px;
+}
+
+.event-card p {
+    margin: 0;
+}
+
+.capacity {
+    font-weight: bold;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 20px;
+}
